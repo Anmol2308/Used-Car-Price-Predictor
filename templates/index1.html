@@ -26,7 +26,8 @@
 
                     <div class="col-10 form-group" style="text-align: center">
                         <label><b>Select Company: </b></label>
-                        <select class="selectpicker form-control" id="company" name="company" required="1">
+                        <select class="selectpicker form-control" id="company" name="company" required="1"
+                            onchange="load_car_models(this.id, 'car_model')">
                             {% for company in companies%}
                             <option value="{{company}}">{{ company }}</option>
                             {% endfor %}
@@ -35,7 +36,8 @@
                     <div class="col-10 form-group" style="text-align: center">
                         <label><b>Select Car Model: </b></label>
                         <select class="selectpicker form-control" id="car_model" name="car_model" required="1">
-                            <option value=""></option>
+
+
                         </select>
                     </div>
                     <div class="col-10 form-group" style="text-align: center">
@@ -64,6 +66,14 @@
         </div>
     </div>
 
+    <script>
+
+        function load_car_models(this.id, car_model_id) {
+            var company = document.getElementById(this.id);
+            var car_model = document.getElementById(car_model_id);
+            console.log(company.value);
+        }
+    </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
