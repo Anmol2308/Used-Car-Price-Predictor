@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Car Price Predictor</title>
-    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="./static/car.svg">
+                <img src="{{url_for('static', filename='car.svg')}}">
             </div>
         </div>
         <div class="footer">
