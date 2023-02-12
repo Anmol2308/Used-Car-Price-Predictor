@@ -40,42 +40,39 @@
                     <select class="selectpicker form-control" id="car_models" name="car_models" required="1">
                     </select>
                 </div>
-                <div class="col-10 form-group" style="text-align: center">
-                    <label><b>Select Year of Purchase: </b></label>
+                <div class="col-md-10 form-group" style="text-align: center">
+                    <label><b>Select Year of Purchase:</b> </label><br>
                     <select class="selectpicker form-control" id="year" name="year" required="1">
-                        {% for year in years%}
-                        <option value="{{year}}">{{ year }}</option>
+                        {% for year in years %}
+                        <option value="{{ year }}">{{ year }}</option>
                         {% endfor %}
-
                     </select>
                 </div>
-                <div class="col-10 form-group" style="text-align: center">
-                    <label><b>Select Fuel Type: </b></label>
+                <div class="col-md-10 form-group" style="text-align: center">
+                    <label><b>Select the Fuel Type:</b> </label><br>
                     <select class="selectpicker form-control" id="fuel_type" name="fuel_type" required="1">
-                        {% for fuel_type in fuel_type %}
-                        <option value="{{fuel_type}}">{{ fuel_type }}</option>
+                        {% for fuel in fuel_type %}
+                        <option value="{{ fuel }}">{{ fuel }}</option>
                         {% endfor %}
                     </select>
                 </div>
-                <div class="col-10 form-group" style="text-align: center">
-                    <label><b>Number Of Kilometres Travelled: </b></label>
-                    <input class="formcontrol" type="text" id="kilo_driven" name="kilo_driven"
-                        placeholder="Number Of Kilometers Travelled">
+                <div class="col-md-10 form-group" style="text-align: center">
+                    <label><b>Enter the Number of Kilometres that the car has travelled:</b> </label><br>
+                    <input type="text" class="form-control" id="kilo_driven" name="kilo_driven"
+                        placeholder="Enter the kilometres driven ">
                 </div>
-                <div class="col-10 form-group" style="text-align: center">
+                <div class="col-md-10 form-group" style="text-align: center">
                     <button class="btn btn-primary form-control" onclick="send_data()">Predict Price</button>
                 </div>
-
             </form>
             <br>
-
             <div class="row">
                 <div class="col-12" style="text-align: center">
-                    <h3><span id="prediction"></span></h3>
+                    <h4><span id="prediction"></span></h4>
                 </div>
             </div>
-
         </div>
+    </div>
     </div>
     </div>
 
