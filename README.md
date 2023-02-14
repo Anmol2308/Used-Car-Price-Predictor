@@ -20,4 +20,5 @@ Data consist of five features on the basis of which the price is predicted:
 --> Used html and css for front end of the web app
 --> Used javascript jinja2 for the backend
 #### Deployment of the app:
+  I have deployed the web app on pythonanywhere. You can check it out on: anmol23.pythonanywhere.com
 
